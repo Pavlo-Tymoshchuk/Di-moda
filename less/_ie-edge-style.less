@@ -1,0 +1,49 @@
+@media (min-width: 1160px) {
+    
+    @supports (-ms-ime-align:auto) {
+        .main-button{
+            &:hover {
+                color: #333333;
+                background-color: #F0F0F0;
+            }
+            
+            &.banner {
+                &:hover {
+                    color: #ffffff;
+                    background-color: #333333;
+                }
+                
+            }
+        }
+        
+        .main-button-color {
+            &:hover {
+                background-color: #000000;
+            }
+        }
+    }
+}
+
+ @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .main-button{
+        &:hover {
+            color: #333333;
+            background-color: #333333;
+        }
+        
+        &.banner {
+            
+            &:hover {
+                color: #FFFFFF;
+                background-color: #F0F0F0;
+            }
+            
+        }
+    }
+    
+    .main-button-color {
+        &:hover {
+            background-color: #000000;
+        }
+    }
+}
