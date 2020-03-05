@@ -1,0 +1,142 @@
+/* Footer */
+
+@media(max-width: 1200px) {
+    
+    .footer__wrapper {
+        flex-direction: column;
+    }
+    
+    .footer__info {
+        justify-content: flex-start;
+    }
+    
+    .footer__text {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0px;
+        width: 100%;
+        order: 2;
+        margin-top: 40px;
+        
+        p {
+            max-width: 320px;
+        }
+    }
+    
+    .footer__info-item{
+        
+        &:nth-child(2) {
+            margin-right: 30px;
+        }
+        
+        &.footer-contact {
+            max-width: 219px;
+            margin-right: auto;
+        }
+    }
+    
+    .footer__copyright {
+        margin-top: 50px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    .footer {
+        padding: 30px 0px;
+    }
+    
+    .footer__info {
+        flex-direction: column;
+    }
+    
+    .footer__info-item {
+        width: 100%;
+        
+        &.footer-contact {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        &.mobile-drop {
+            border-bottom: 1px solid #3E3E3E;
+            
+            h4 {
+                display: none;
+            }
+            
+            &:nth-child(2) {
+                margin-right: 0px;
+            }
+            
+            &:nth-child(3) {
+                margin-top: 15px;
+            }
+            
+            .footer__list {
+                max-height: 0px;
+                margin-bottom: 0px;
+                overflow: hidden;
+                transition: max-height .2s;
+            }
+            
+            &.active {
+                .footer__list {
+                    max-height: 241px;
+                    transition: max-height .4s;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        
+        .footer-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            
+            span {
+                &:nth-child(1) {
+                    padding-right: 8px;
+                }
+            }
+            
+            .icon-drop {
+                font-size: 5px;
+                transition: transform .4s;
+            }
+        }
+    }
+    
+    .footer__text {
+        flex-direction: column;
+        margin-top: 30px;
+        
+        p {
+            max-width: 100%;
+        }
+    }
+    
+    .footer__copyright {
+        flex-direction: column;
+        margin-top: 30px;
+        
+        p {
+            order: 3;
+        }
+        
+        a {
+            display: block;
+            margin-bottom: 20px;
+            
+            &:last-of-type {
+                order: 1;
+            }
+            
+            &:first-of-type {
+                order: 2;
+            }
+        }
+    }
+}

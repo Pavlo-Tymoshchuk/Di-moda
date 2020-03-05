@@ -1,0 +1,115 @@
+/* Footer */
+
+.footer {
+    background-color: #333333;
+    color: #F0F0F0;
+    padding: 40px 0px;
+}
+
+.footer__wrapper {
+    display: flex;
+}
+
+.footer__text {
+    width: 350px;
+    margin-right: 130px;
+    flex-shrink: 0;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer__info-item {
+    &.footer-contact {
+        max-width: 220px;
+        
+        .footer__item {
+            display: flex;
+            padding-left: 20px;
+            position: relative;
+            
+            .decor {
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 0px;
+                top: 3px;
+            }
+            
+            &:nth-child(1) {
+                .decor {
+                    width: 12px;
+                    height: 15px;
+                }
+            }
+            
+             &:nth-child(2) {
+                .decor {
+                    width: 13px;
+                    height: 10px;
+                }
+            }
+            
+             &:nth-child(3) {
+                .decor {
+                    width: 11px;
+                    height: 11px;
+                }
+            }
+        }
+    }
+    
+    h4 {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #696969;
+        margin-bottom: 15px;
+    }
+    
+    .footer-button {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #696969;
+        display: none;
+    }
+}
+
+.footer__list {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footer__item {
+    margin-bottom: 15px;
+    
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    
+    p {
+        font-weight: 400;
+    }
+}

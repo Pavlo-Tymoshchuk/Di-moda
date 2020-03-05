@@ -14,6 +14,12 @@
             }
         }
         
+        > p:hover {
+             &::before {
+                width: 100%;
+            }
+        }
+        
         &:hover {
              .header-drop__list {
                 visibility: visible;
@@ -26,6 +32,12 @@
     .header-drop__item {
         &:hover {
             color: #5F2275;
+        }
+    }
+    
+    .live-sarch__item {
+        &:hover {
+            background-color: #F0F0F0;
         }
     }
     
@@ -61,7 +73,8 @@
         }
     }
     
-    .call-back-button {
+    .call-back-button,
+    .to-top {
         &:hover {
             border-color: #8D4ACC;
             color: #8D4ACC;
@@ -71,6 +84,12 @@
     .more_info {
         &:hover {
             color: #4F4F4F;
+        }
+    }
+    
+    .cansel-add {
+        &:hover {
+            color: #8D4ACC;
         }
     }
     
@@ -128,6 +147,125 @@
     .close__popup {
         &:hover {
             color: #000000;
+        }
+    }
+    
+    /* /Popup */
+    
+    /* About us */
+    
+    .about-us__wrapper {
+        a:hover {
+            color: #4F4F4F;
+        }
+    }
+    
+    /* /About us */
+    
+    /* Footer */
+    
+    .footer {
+        a {
+            transition: color .4s;
+            
+            &:hover {
+                color: #8D4ACC;
+            }
+        }
+    }
+    
+    /* /Footer */
+    
+    /* Catalog */
+    
+    .catalog-sub-category__item,
+    .catalog-category__item {
+        a {
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+    
+    .catalog-drop__item {
+        &:hover {
+            background-color: #F0F0F0;
+        }
+    }
+    
+    .selected-filter__item {
+        &:hover {
+            .delete {
+                background-color: #E0E0E0;
+            }
+        }
+    }
+    
+    .clear-sort {
+        &:hover {
+            color: #000000;
+        }
+    }
+    
+    .catalog__button-select {
+        &:hover {
+            color: #5F2275;
+        }
+    }
+    
+    /* /Catalog */
+    
+    /* Product page */
+    
+    .product-img__item {
+        &:hover {
+            border-color: #333333;
+        }
+    }
+    
+    .product-img__button {
+        &:hover {
+            background-color: #f3f3f3;
+        }
+    }
+    
+    .to-favorites {
+        &:hover {
+            color: #8D4ACC;
+        }
+    }
+    
+    .product-size__item {
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    
+    .product-info-buttons__item {
+        &:hover {
+            color: #8D4ACC;
+        }
+    }
+    
+    .product-calc__wrapper {
+        button {
+            &:hover {
+                background-color: #333333;
+                color: #ffffff;
+            }
+        }
+    }
+    
+    .product-general-buttons {
+        button {
+            &:hover {
+                color: #333333;
+            }
         }
     }
 }

@@ -1,0 +1,64 @@
+@media(max-width: 1200px) {
+    html {
+        &.overflow {
+            margin-right: 0px;
+        }
+    }
+    
+    .container {
+        max-width: 768px;
+        padding: 0px 30px;
+    }
+    
+    .main-caption-m {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+    /* Breadcrumbs */
+    
+    .breadcrumbs {
+        margin: 100px 0px 28px;
+    }
+}
+
+@media(max-width: 768px) {
+    main {
+        margin-top: 50px;
+    }
+    
+    .container {
+        max-width: 400px;
+        padding: 0px 20px;
+    }
+    
+    .main-button {
+        max-width: 100%;
+    }
+    
+    .main-button-color {
+        max-width: 100%;
+    }
+    
+    .general-buttons {
+        button {
+            font-size: 8px;
+        }
+    }
+    
+    .product-buttons  {
+        flex-direction: column;
+        align-items: center;
+        
+        > button {
+            order: 2;
+        }
+        
+        .general-buttons {
+            position: relative;
+            left: 0px;
+            transform: none;
+            margin-bottom: 10px;
+        }
+    }
+}

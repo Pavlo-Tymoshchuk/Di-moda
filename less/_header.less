@@ -1,3 +1,6 @@
+/* Header */
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -7,19 +10,28 @@
     color: #333333;
     padding: 0px 40px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.09);
 }
 
 .header-nav {
     display: flex;
     align-items: center;
+    
+    .close__popup {
+        display: none;
+    }
 }
 
 .header-nav__list {
     display: flex;
     font-weight: 600;
     
-    &:first-child {
+    &:first-of-type {
         margin-right: 80px;
     }
 }
@@ -29,6 +41,14 @@
     position: relative;
     padding: 25px 0px;
     
+    &.user {
+        display: none;
+    }
+    
+    .icon-drop {
+        display: none;
+    }
+    
     &:last-child {
         margin-right: 0px;
     }
@@ -36,6 +56,24 @@
     > a {
         padding: 25px 0px;
         position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 10px;
+            width: 0%;
+            height: 2px;
+            background-color: #333333;
+            transition: width .4s;
+        }
+    }
+    
+    > p {
+        padding: 25px 0px;
+        position: relative;
+        display: inline;
+        cursor: pointer;
         
         &::before {
             content: "";
@@ -97,6 +135,51 @@
     }
 }
 
+.live-search__list {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    background-color: #FFFFFF;
+    max-height: 0px;
+    overflow: hidden;
+    scrollbar-color: #d9d9d9 white; /* thumb and track color */
+    scrollbar-width: thin;
+    transition: max-height .4s, padding .4s;
+    overflow: auto;
+    
+    &.active {
+        max-height: 236px;
+        padding: 10px 0px;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #d9d9d9;
+        border-radius: 4px;
+    }
+}
+
+.live-sarch__item {
+    color: #BDBDBD;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    transition: background-color .4s;
+    
+    span {
+        color: #333333;
+    }
+    
+    a {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
 .header-icon__list {
     display: flex;
 }
@@ -140,3 +223,10 @@
         font-size: 24px;
     }
 }
+
+.live-search,
+.burger-menu {
+    display: none;
+}
+
+/* Header */

@@ -66,6 +66,9 @@ body {
     color: #333333;
 }
 
+main {
+    margin-top: 70px;
+}
 .container {
     max-width: 1200px;
     padding: 0 15px;
@@ -73,6 +76,7 @@ body {
 }
 
 .input__wrapper {
+    display: block;
     position: relative;
     z-index: 1;
 }
@@ -81,11 +85,12 @@ body {
     position: absolute;
     left: 22px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1);
     color: #BDBDBD;
     font-size: 14px;
     line-height: 16px;
-    transition: transform .4s, font-size .4s;
+    transform-origin: left;
+    transition: transform .4s, left .6s;
 }
 
 .main-input {
@@ -101,8 +106,7 @@ body {
     
     &.active {
         + .custome-placeholder {
-            font-size: 8px;
-            transform: translateY(-110%);
+            transform: translateY(-110%) scale(0.6);
         }
     }
    
@@ -120,6 +124,8 @@ body {
             color: #EB5757;
             font-size: 10px;
             line-height: 110%;
+            font-weight: 500;
+            margin-top: 5px;
         }
     }
 }
@@ -223,10 +229,12 @@ body {
         font-size: 9px;
         padding: 10px 5px;
         transition: color .4s;
+        position: relative;
+        top: 2px;
     }
     
     .wrapper {
-        width: 45px;
+        width: 55px;
         display: flex;
         align-items: flex-end;
         margin: 0px 15px;
@@ -237,7 +245,7 @@ body {
     }
     
     .current {
-        width: 24px;
+        width: 30px;
         font-weight: 500;
         font-size: 24px;
         line-height: 20px;
@@ -245,7 +253,7 @@ body {
     }
     
     .all {
-        width: 14px;
+        width: 20px;
         text-align: center;
     }
 }
@@ -256,4 +264,176 @@ body {
     line-height: 39px;
 }
 
+
+.button-to-top {
+    position: fixed;
+    right: 50px;
+    bottom: -50px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .4s, bottom .4s;
+    
+    &.show {
+        bottom: 60px;
+        opacity: 1;
+        z-index: 3;
+    }
+    
+    .to-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #E0E0E0;
+        background: rgba(255, 255, 255, 0.75);
+        transition: border-color 0.4s, color 0.4s;
+    }
+    
+    .icon-arrow-right {
+        display: block;
+        transform: rotate(-90deg);
+        font-size: 8px;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+}
+
 /* /General */
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+    margin: 110px 0px 40px;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.breadcrumbs__item {
+    position: relative;
+    
+    a {
+        padding-right: 4px;
+    }
+    
+    &::after {
+        content: "/";
+        font-weight: 600;
+        padding-right: 5px;
+    }
+    
+    &:last-child {
+        margin-right: 0px;
+        pointer-events: none;
+        color: #BDBDBD;
+        
+        &::after {
+            display: none;
+        }
+    }
+}
+
+/* /Breadcrumbs */
+
+/* Add to card */
+
+.add-to-card {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    max-width: 495px;
+    z-index: 4;
+}
+
+.add-to-card__list {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.add-to-card__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 20px;
+
+    p {
+        font-weight: 700;
+    }
+    
+    .cansel-add {
+        font-weight: 600;
+        text-decoration: underline;
+        transition: color .4s;
+    }
+}
+
+.add-to-card__body {
+    display: flex;
+    margin-bottom: 15px;
+    
+    .img {
+        width: 76px;
+        height: 73px;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+    
+    .name {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+    }
+    
+    .wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .price {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+    }
+    
+    .old-price {
+        order: 2;
+        font-size: 14px;
+        text-decoration: line-through;
+        
+        + .price {
+            color: #EB5757;
+            margin-right: 10px;
+        }
+    }
+}
+
+.add-to-card__footer {
+    display: flex;
+    justify-content: space-between;
+    
+    .main-button {
+        max-width: 223px;
+    }
+    
+    .main-button-color {
+        max-width: 223px;
+    }
+}
