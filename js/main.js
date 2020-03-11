@@ -347,8 +347,27 @@ document.addEventListener('DOMContentLoaded', function(){
             let reviewName = item.querySelector('.reviews__footer .name').innerHTML;
             let reviewSub = item.querySelector('.reviews__footer .date').innerHTML;
             let reviewImg = item.querySelector('.reviews__footer .img').getAttribute('style');
+            let reviewsAllimg = item.querySelectorAll('.reviews-photo__item');
             
             let popupReview = document.querySelector('.popup-reviews');
+            
+            let popupReviewImgList = popupReview.querySelector('.reviews-photo__list');
+            
+            if(reviewsAllimg.length != 0) {
+                popupReview.classList.remove('hide-img');
+                
+                reviewsAllimg.forEach(function(item){
+                    let imgSrc = item.getAttribute('style');
+                    let newImg = document.createElement("div");
+                    newImg.classList.add("reviews-photo__item");
+                    newImg.setAttribute('style', '' + imgSrc + '');
+                    
+                    popupReviewImgList.append(newImg);
+                });
+            } else {
+                popupReview.classList.add('hide-img');
+            }
+            
             
             popupReview.querySelector('.content p').innerHTML = '' + reviewContent + '';
             popupReview.querySelector('.reviews__footer .name').innerHTML = '' + reviewName + '';
@@ -356,6 +375,29 @@ document.addEventListener('DOMContentLoaded', function(){
             popupReview.querySelector('.reviews__footer .img').setAttribute('style', '' + reviewImg + '');
         });
     }
+    
+    let closeReviews = document.querySelector(".popup-reviews .close__popup");
+    
+    if(closeReviews) {
+        closeReviews.addEventListener("click", function(){
+            let allImg = document.querySelectorAll(".popup-reviews .reviews-photo__item");
+            
+            allImg.forEach(function(item){
+                item.remove();
+            });
+        });
+    }
+    
+    
+    
+    let popupInnerButton = document.querySelectorAll('button.popup-link');
+    
+    popupInnerButton.forEach(function(item){
+        item.addEventListener("click", function(){
+            let wrapperPopup = item.closest(".popup");
+            wrapperPopup.classList.remove('active');
+        });
+    });
     
     // /Popup
     
@@ -377,12 +419,6 @@ document.addEventListener('DOMContentLoaded', function(){
             else
                 element.closest('.catalog-select__item').classList.add('active');
         }
-        
-        
-        
-        // if(element.closest('.catalog-input__wrapper')){
-        //     element.closest('.catalog-input__wrapper').classList.add('active');
-        // }
     });
     
     document.querySelector('body').addEventListener('click', function(event){
@@ -416,6 +452,40 @@ document.addEventListener('DOMContentLoaded', function(){
     });
     
     // /Scroll to top
+    
+    // Scroll to block 
+    
+    function scrollToBlock() {
+        let toBlockButton = document.querySelector(".js-to-block");
+        let blockPosition = document.querySelector('.together-cheaper').offsetTop;
+        let number = 80;
+        
+        toBlockButton.addEventListener('click', function(){
+        window.scrollTo({
+                top: blockPosition - number,
+                behavior: "smooth"
+            });
+        });
+    }
+    
+    scrollToBlock();
+    
+    function scrollBlock() {
+        let block = document.querySelector('.product-list');
+        if(block) {
+            block.scrollLeft = 500;
+        }
+       
+    }
+    
+    window.addEventListener('resize', function(){
+        scrollBlock();
+    });
+    
+    scrollBlock();
+    
+    
+    // /Scroll to block
     
     // Burger
     
@@ -452,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.addEventListener('click', function(e){
         let item = e.target;
         
-        if(!item.closest('.live-search') && !item.closest('.header-live-search') && !item.closest(".js-button") && !item.closest(".burger-menu")) {
+        if(!item.closest('.live-search') && !item.closest('.header-live-search') && !item.closest(".js-button") && !item.closest(".burger-menu") && !item.closest('.popup')) {
             searchList.classList.remove('active');
             htmlOverflow.classList.remove('overflow');
         }

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Di-mode</title>
+    <title>Di-moda</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header class="header">
         <a href="#" class="header-logo">
-            LOGO
+            <img src="./img/header-logo.svg" alt="Di-moda">
         </a>
         <nav class="header-nav">
             <button class="js-close close__popup">
@@ -296,7 +296,7 @@
                         <p>Размер:</p>
                         <ul class="product-size__list">
                             <li class="product-size__item">Xs</li>
-                            <li class="product-size__item">s</li>
+                            <li class="product-size__item active">s</li>
                             <li class="product-size__item disabled">m</li>
                             <li class="product-size__item">l</li>
                             <li class="product-size__item">xl</li>
@@ -324,13 +324,13 @@
                         <button class="add">+</button>
                     </div>
                     <div class="product-buttons__wrapper">
-                        <button class="main-button-color js-button-decor">
+                        <a href="#" class="main-button-color js-button-decor">
                             <span class="text">
                                 <span class="icon-cart"></span>
                                 <span>в корзину</span>
                             </span>
-                        </button>
-                        <button class="main-button js-button-decor">
+                        </a>
+                        <button class="main-button js-button-decor js-to-block">
                             <span class="text">
                                 <span class="decor-percent">%</span>
                                 <span>выбрать комплект</span>
@@ -361,11 +361,493 @@
                 </div>
             </div>
         </section>
+        <section class="together-cheaper">
+            <div class="together-cheaper__wrapper">
+                <div class="container">
+                    <h3 class="main-caption-m">Вместе дешевле</h3>
+                    <h5>Экономьте, покупая комплектом</h5>
+                </div>
+                <ul class="product-list">
+                    <li class="product__item">
+                        <div class="product__img">
+                            <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4><a href="#">Куртка женская</a></h4>
+                            <div class="wrapper">
+                                <p class="size">Размер: <span>M</span></p>
+                                <p class="color">Цвет: <span>мокко</span></p>
+                            </div>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p class='price'>1520 грн</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product__item sale">
+                        <div class="product__img">
+                            <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4><a href="#">Куртка женская</a></h4>
+                            <div class="wrapper">
+                                <p class="size">Размер: <span>M</span></p>
+                                <p class="color">Цвет: <span>мокко</span></p>
+                            </div>
+                        </div>
+                        <button class="change-product js-button" data-target="together-cheaper">Изменить</button>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p class='price'>1520 грн</p>
+                                <p class="old-price">1900 грн</p>
+                            </div>
+                        </div>
+                        <button class="main-button js-button-decor js-button" data-target="together-cheaper">
+                            <span class="text">изменить <span>товар</span></span>
+                        </button>
+                    </li>
+                    <li class="product__item sale">
+                        <div class="product__img">
+                            <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4><a href="#">Куртка женская</a></h4>
+                            <div class="wrapper">
+                                <p class="size">Размер: <span>M</span></p>
+                                <p class="color">Цвет: <span>мокко</span></p>
+                            </div>
+                        </div>
+                        <button class="change-product js-button" data-target="together-cheaper">Изменить</button>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p class='price'>1520 грн</p>
+                                <p class="old-price">1900 грн</p>
+                            </div>
+                        </div>
+                        <button class="main-button js-button-decor js-button" data-target="together-cheaper">
+                            <span class="text">изменить <span>товар</span></span>
+                        </button>
+                    </li>
+                    <li class="product__item">
+                        <button class="main-button js-button-decor js-button" data-target="together-cheaper">
+                            <span class="text">выбрать товар</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="container">
+                     <div class="product-sale-line">
+                        <ul class="product-sale-line__list">
+                            <li class="product-sale-line__item">Экономия</li>
+                            <li class="product-sale-line__item">
+                                <span class="decor"></span>
+                                <span class="text">100 грн</span>
+                            </li>
+                            <li class="product-sale-line__item">
+                                <span class="decor"></span>
+                                <span class="text">200 грн</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="add-to-cart">
+                        <div class="product__price">
+                            <p class="old-price">1900 грн</p>
+                            <p class='price'>1520 грн</p>
+                        </div>
+                        <a href="#" class="main-button-color js-button-decor">
+                            <span class="text">
+                                <span class="icon-cart"></span>
+                                <span>в корзину</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews-block slider-infinity reviews-block-product">
+            <div class="reviews-block__wrapper container">
+                <div class="wrapper">
+                    <h3 class="main-caption-m">Отзывы об этом товаре</h3>
+                    <a href="#">Перейти на страницу отзывов</a>
+                </div>
+                
+                <ul class="reviews__list reviews-slider__list js-infinity-slider-list">
+                    <li class="reviews__item js-item js-slider-item-infinity show" data-index="1">
+                        <div class="content">
+                            <p>Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ... Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно .. Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ... Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ..Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ... Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ...</p>
+                        </div>
+                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                        <ul class="reviews-photo__list">
+                            <li class="reviews-photo__item" style="background-image:url(./img/look-book-img-1.png)"></li>
+                            <li class="reviews-photo__item" style="background-image:url(./img/look-book-img-2.png)"></li>
+                            <li class="reviews-photo__item" style="background-image:url(./img/look-book-img-3.png)"></li>
+                        </ul>
+                        <div class="reviews__footer">
+                            <div class="img" style="background-image: url(./img/reviews-img-1.png)"></div>
+                            <div class="info">
+                                <h5 class="name">Maria</h5>
+                                <p class="date">10.02.2020</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item js-item js-slider-item-infinity" data-index="2">
+                        <div class="content">
+                            <p>Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ... Переведено с английского языка. «Лукбук» -Переведено с английского языка. «Лукбук» -Переведено с английского языка. «Лукбук» -</p>
+                        </div>
+                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                        <ul class="reviews-photo__list">
+                            <li class="reviews-photo__item" style="background-image:url(./img/look-book-img-1.png)"></li>
+                            <li class="reviews-photo__item" style="background-image:url(./img/look-book-img-2.png)"></li>
+                            <li class="reviews-photo__item" style="background-image:url(./img/look-book-img-3.png)"></li>
+                        </ul>
+                        <div class="reviews__footer">
+                            <div class="img" style="background-image: url(./img/reviews-img-1.png)"></div>
+                            <div class="info">
+                                <h5 class="name">Maria</h5>
+                                <p class="date">10.02.2020</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item js-item js-slider-item-infinity" data-index="3">
+                        <div class="content">
+                            <p>Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ... Переведено с английского языка. «Лукбук» -Переведено с английского языка. «Лукбук» -Переведено с английского языка. «Лукбук» -Переведено с английского языка. «Лукбук» -Переведено с английского языка. «Лукбук» -Переведено с английского языка. «Лукбук» -</p>
+                        </div>
+                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                        <div class="reviews__footer">
+                            <div class="img" style="background-image: url(./img/reviews-img-1.png)"></div>
+                            <div class="info">
+                                <h5 class="name">Maria</h5>
+                                <p class="date">10.02.2020</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item js-item js-slider-item-infinity" data-index="4">
+                        <div class="content">
+                            <p>Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ...</p>
+                        </div>
+                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                        <div class="reviews__footer">
+                            <div class="img" style="background-image: url(./img/reviews-img-1.png)"></div>
+                            <div class="info">
+                                <h5 class="name">Maria</h5>
+                                <p class="date">10.02.2020</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item js-item js-slider-item-infinity" data-index="5">
+                        <div class="content">
+                            <p>Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ...</p>
+                        </div>
+                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                        <div class="reviews__footer">
+                            <div class="img" style="background-image: url(./img/reviews-img-1.png)"></div>
+                            <div class="info">
+                                <h5 class="name">Maria</h5>
+                                <p class="date">10.02.2020</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item js-item js-slider-item-infinity" data-index="6">
+                        <div class="content">
+                            <p>Переведено с английского языка. «Лукбук» - это коллекция фотографий, составленная для демонстрации модели, фотографа, стиля, стилиста или линии одежды. Обычно ...</p>
+                        </div>
+                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                        <div class="reviews__footer">
+                            <div class="img" style="background-image: url(./img/reviews-img-1.png)"></div>
+                            <div class="info">
+                                <h5 class="name">Maria</h5>
+                                <p class="date">10.02.2020</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="product-buttons">
+                    <button class="main-button-color js-button-decor js-button" data-target="enter">
+                        <span class="text">оставить отзыв</span>
+                    </button>
+                    <!-- <a href="#" class="main-button-color js-button-decor js-button">
+                        <span class="text">оставить отзыв</span>
+                    </a> -->
+                    <a href="#" class="reviews-block__link-mobile">Перейти на страницу отзывов</a>
+                    <div class="general-buttons js-arrow-infinity">
+                        <button class="prev">
+                            <span class="icon-arrow-left"></span>
+                        </button>
+                        <div class="wrapper page">
+                            <span class="current"></span>
+                            <span>/</span>
+                            <span class="all"></span>
+                        </div>
+                        <button class="next">
+                            <span class="icon-arrow-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <section class="product-section slider slider-infinity product-page">
+            <div class="product-section__wrapper container">
+                <div class="product-section__header">
+                    <h3 class="product-section__name">Еще из этой категории</h3>
+                    <span class="procut-section__calc">Всего <span>40</span></span>
+                </div>
+                <ul class="product__list product-slider__list js-infinity-slider-list">
+                    <li class="product__item sale js-slider-item-infinity show" data-index="1">
+                        <div class="product__img">
+                            <img src="./img/popular-category-img-1.jpg" alt="Фото">
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4>Куртка женская</h4>
+                            <ul class="size__list">
+                                <li>XS,</li>
+                                <li>S,</li>
+                                <li>M,</li>
+                                <li>42,</li>
+                                <li>43,</li>
+                                <li>44</li>
+                            </ul>
+                            <ul class="color__list">
+                                <li style="background-color:#4F4F4F;"></li>
+                                <li style="background-color:#828282;"></li>
+                                <li style="background-color:#096476;"></li>
+                                <li style="background-color:#219653;"></li>
+                                <li style="background-color:#E0E0E0;"></li>
+                            </ul>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p class='price'>1520 грн</p>
+                                <p class="old-price">1900 грн</p>
+                            </div>
+                            <div class="product-add-to-cart">
+                                <button>
+                                    <span class="icon-cart"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product__item-decor">-20%</div>
+                    </li>
+                    <li class="product__item js-slider-item-infinity new" data-index="2">
+                        <div class="product__img">
+                            <img src="./img/product-img-1.png" alt="">
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4>Куртка женская</h4>
+                            <ul class="size__list">
+                                <li>XS,</li>
+                                <li>S,</li>
+                                <li>M,</li>
+                                <li>42,</li>
+                                <li>43,</li>
+                                <li>44</li>
+                            </ul>
+                            <ul class="color__list">
+                                <li style="background-color:#4F4F4F;"></li>
+                                <li style="background-color:#828282;"></li>
+                                <li style="background-color:#096476;"></li>
+                                <li style="background-color:#219653;"></li>
+                                <li style="background-color:#E0E0E0;"></li>
+                            </ul>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p>1520 грн</p>
+                            </div>
+                            <div class="product-add-to-cart">
+                                <button>
+                                    <span class="icon-cart"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product__item-decor">new</div>
+                    </li>
+                    <li class="product__item js-slider-item-infinity" data-index="3">
+                        <div class="product__img">
+                            <img src="./img/product-img-1.png" alt="">
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4>Куртка женская</h4>
+                            <ul class="size__list">
+                                <li>XS,</li>
+                                <li>S,</li>
+                                <li>M,</li>
+                                <li>42,</li>
+                                <li>43,</li>
+                                <li>44</li>
+                            </ul>
+                            <ul class="color__list">
+                                <li style="background-color:#4F4F4F;"></li>
+                                <li style="background-color:#828282;"></li>
+                                <li style="background-color:#096476;"></li>
+                                <li style="background-color:#219653;"></li>
+                                <li style="background-color:#E0E0E0;"></li>
+                            </ul>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p>1520 грн</p>
+                            </div>
+                            <div class="product-add-to-cart">
+                                <button>
+                                    <span class="icon-cart"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product__item js-slider-item-infinity" data-index="4">
+                        <div class="product__img">
+                            <img src="./img/product-img-1.png" alt="">
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4>Куртка женская</h4>
+                            <ul class="size__list">
+                                <li>XS,</li>
+                                <li>S,</li>
+                                <li>M,</li>
+                                <li>42,</li>
+                                <li>43,</li>
+                                <li>44</li>
+                            </ul>
+                            <ul class="color__list">
+                                <li style="background-color:#4F4F4F;"></li>
+                                <li style="background-color:#828282;"></li>
+                                <li style="background-color:#096476;"></li>
+                                <li style="background-color:#219653;"></li>
+                                <li style="background-color:#E0E0E0;"></li>
+                            </ul>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p>1520 грн</p>
+                            </div>
+                            <div class="product-add-to-cart">
+                                <button>
+                                    <span class="icon-cart"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product__item js-slider-item-infinity" data-index="5">
+                        <div class="product__img">
+                            <img src="./img/product-img-1.png" alt="">
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4>Куртка женская</h4>
+                            <ul class="size__list">
+                                <li>XS,</li>
+                                <li>S,</li>
+                                <li>M,</li>
+                                <li>42,</li>
+                                <li>43,</li>
+                                <li>44</li>
+                            </ul>
+                            <ul class="color__list">
+                                <li style="background-color:#4F4F4F;"></li>
+                                <li style="background-color:#828282;"></li>
+                                <li style="background-color:#096476;"></li>
+                                <li style="background-color:#219653;"></li>
+                                <li style="background-color:#E0E0E0;"></li>
+                            </ul>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p>1520 грн</p>
+                            </div>
+                            <div class="product-add-to-cart">
+                                <button>
+                                    <span class="icon-cart"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product__item js-slider-item-infinity" data-index="6">
+                        <div class="product__img">
+                            <img src="./img/product-img-1.png" alt="">
+                            <button class="add-to-favorites">
+                                <span class="icon-product-like"></span>
+                            </button>
+                        </div>
+                        <div class="product__info">
+                            <h4>Куртка женская</h4>
+                            <ul class="size__list">
+                                <li>XS,</li>
+                                <li>S,</li>
+                                <li>M,</li>
+                                <li>42,</li>
+                                <li>43,</li>
+                                <li>44</li>
+                            </ul>
+                            <ul class="color__list">
+                                <li style="background-color:#4F4F4F;"></li>
+                                <li style="background-color:#828282;"></li>
+                                <li style="background-color:#096476;"></li>
+                                <li style="background-color:#219653;"></li>
+                                <li style="background-color:#E0E0E0;"></li>
+                            </ul>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__price">
+                                <p>1520 грн</p>
+                            </div>
+                            <div class="product-add-to-cart">
+                                <button>
+                                    <span class="icon-cart"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="product-buttons">
+                    <a href="#" class="main-button js-button-decor">
+                        <span class="text">выбрать</span>
+                    </a>
+                    <div class="general-buttons js-arrow-infinity">
+                        <button class="prev">
+                            <span class="icon-arrow-left"></span>
+                        </button>
+                        <div class="wrapper page">
+                            <span class="current"></span>
+                            <span>/</span>
+                            <span class="all"></span>
+                        </div>
+                        <button class="next">
+                            <span class="icon-arrow-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__wrapper container">
             <div class="footer__text">
-                <a href="#" class="footer__logo">Logo</a>
+                <a href="#" class="footer__logo">
+                    <img src="./img/footer-logo.svg" alt="Di-moda">
+                </a>
                 <p>Верхняя одежда объединяет в себе удобство, практичность, привлекательность и приемлемую стоимость</p>
             </div>
             <div class="footer__info">
@@ -441,6 +923,81 @@
             <span class="icon-arrow-right"></span>
         </button>
     </div>
+    <section class="popup popup-pass" data-target="pass">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <h3 class="caption">Восстановление пароля</h3>
+        <p class="text">Мы отправим вам новый пароль на почту</p>
+        <form action="#">
+            <label class="input__wrapper">
+                <input type="text" class="main-input">
+                <span class="custome-placeholder">E-mail</span>
+            </label>
+            <div class="wrapper">
+                <button type="button" class="js-button popup-link" data-target="enter">Вспомнил пароль</button>
+            </div>
+            <button class="main-button-color js-button-decor">
+                <span class="text">отправить</span>
+            </button>
+        </form>
+    </section>
+    <section class="popup popup-order popup-enter" data-target="enter">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <h3 class="caption">Вход</h3>
+        <h5>Через</h5>
+        <a href="#" class="main-button popup-button js-button-decor">
+            <span class="text">
+                <span class="icon-fb-popup"></span>
+                <span class="name">facebook</span>
+            </span>
+        </a>
+        <a href="#" class="main-button popup-button js-button-decor">
+            <span class="text">
+                <span class="icon-google"></span>
+                <span class="name">google</span>
+            </span>
+        </a>
+        <form action="#">
+            <h4>С помощью аккаунта CASA DI MODA</h4>
+            <label class="input__wrapper">
+                <input type="text" class="main-input">
+                <span class="custome-placeholder">E-mail</span>
+            </label>
+            <label class="input__wrapper">
+                <input type="password" class="main-input">
+                <span class="custome-placeholder">Пароль</span>
+            </label>
+            <div class="wrapper">
+                <a href="#" class="popup-link">У меня нет аккаунта</a>
+                <button type="button" class="js-button popup-link" data-target="pass">Забыли пароль?</button>
+            </div>
+            <button class="main-button-color js-button-decor">
+                <span class="text">войти</span>
+            </button>
+        </form>
+    </section>
+    <section class="popup popup-reviews" data-target="reviews">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <div class="reviews__item">
+            <div class="content">
+                <p></p>
+            </div>
+            <ul class="reviews-photo__list">
+            </ul>
+            <div class="reviews__footer">
+                <div class="img"></div>
+                <div class="info">
+                    <h5 class="name"></h5>
+                    <p class="date"></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="popup popup-size" data-target="popup-size">
         <button class="js-close close__popup">
             <span class="icon-close"></span>
@@ -464,7 +1021,6 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        
         <h3 class="caption">Состав</h3>
         <p>94% полиэстер, 6% эластан место для второй строки</p>
         <h3 class="caption">Уход</h3>
@@ -491,8 +1047,406 @@
             </li>
         </ul>
     </section>
-    <section class="popup popup-size-table" data-target="size-table">
-        
+    <section class="popup popup-together-cheaper" data-target="together-cheaper">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <h3 class="main-caption-m">Выберите товар</h3>
+        <div class="tabs__wrapper">
+            <ul class="tabs__list">
+                <li class="tabs__item active">Шапки</li>
+                <li class="tabs__item">Шарфы</li>
+                <li class="tabs__item">Брюки</li>
+                <li class="tabs__item">Свитера</li>
+            </ul>
+        </div>
+        <ul class="product__list">
+            <li class="product__item sale">
+                <div class="product__img">
+                    <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                    <button class="add-to-favorites">
+                        <span class="icon-product-like"></span>
+                    </button>
+                </div>
+                <div class="product__info">
+                    <h4><a href="#">Куртка женская</a></h4>
+                    <div class="select__wrapper">
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Размер</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">S</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">M</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">L</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XL</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXL</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Цвет</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__footer">
+                    <div class="product__price">
+                        <p class='price'>1520 грн</p>
+                        <p class="old-price">1900 грн</p>
+                    </div>
+                    <div class="product-add-to-cart">
+                        <button>
+                            <span class="icon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__item-decor">-20%</div>
+            </li>
+            <li class="product__item sale">
+                <div class="product__img">
+                    <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                    <button class="add-to-favorites">
+                        <span class="icon-product-like"></span>
+                    </button>
+                </div>
+                <div class="product__info">
+                    <h4><a href="#">Куртка женская</a></h4>
+                    <div class="select__wrapper">
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Размер</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">S</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">M</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">L</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XL</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXL</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Цвет</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__footer">
+                    <div class="product__price">
+                        <p class='price'>1520 грн</p>
+                        <p class="old-price">1900 грн</p>
+                    </div>
+                    <div class="product-add-to-cart">
+                        <button>
+                            <span class="icon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__item-decor">-20%</div>
+            </li>
+            <li class="product__item sale">
+                <div class="product__img">
+                    <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                    <button class="add-to-favorites">
+                        <span class="icon-product-like"></span>
+                    </button>
+                </div>
+                <div class="product__info">
+                    <h4><a href="#">Куртка женская</a></h4>
+                    <div class="select__wrapper">
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Размер</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">S</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">M</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">L</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XL</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXL</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Цвет</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__footer">
+                    <div class="product__price">
+                        <p class='price'>1520 грн</p>
+                        <p class="old-price">1900 грн</p>
+                    </div>
+                    <div class="product-add-to-cart">
+                        <button>
+                            <span class="icon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__item-decor">-20%</div>
+            </li>
+            <li class="product__item sale">
+                <div class="product__img">
+                    <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                    <button class="add-to-favorites">
+                        <span class="icon-product-like"></span>
+                    </button>
+                </div>
+                <div class="product__info">
+                    <h4><a href="#">Куртка женская</a></h4>
+                    <div class="select__wrapper">
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Размер</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">S</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">M</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">L</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XL</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXL</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Цвет</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__footer">
+                    <div class="product__price">
+                        <p class='price'>1520 грн</p>
+                        <p class="old-price">1900 грн</p>
+                    </div>
+                    <div class="product-add-to-cart">
+                        <button>
+                            <span class="icon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__item-decor">-20%</div>
+            </li>
+             <li class="product__item sale">
+                <div class="product__img">
+                    <a href="#"><img src="./img/product-img-1.png" alt="Фото"></a>
+                    <button class="add-to-favorites">
+                        <span class="icon-product-like"></span>
+                    </button>
+                </div>
+                <div class="product__info">
+                    <h4><a href="#">Куртка женская</a></h4>
+                    <div class="select__wrapper">
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Размер</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XS</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">S</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">M</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">L</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XL</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">XXL</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-select__item">
+                            <button class="catalog__button-select">
+                                <span class="text">Цвет</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <ul class="catalog-drop__list">
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                                <li class="catalog-drop__item">
+                                    <span class="text">мокко</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__footer">
+                    <div class="product__price">
+                        <p class='price'>1520 грн</p>
+                        <p class="old-price">1900 грн</p>
+                    </div>
+                    <div class="product-add-to-cart">
+                        <button>
+                            <span class="icon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__item-decor">-20%</div>
+            </li>
+        </ul>
     </section>
     <div class="overlay"></div>
     <script src="./js/main.js"></script>

@@ -56,6 +56,10 @@ html.overflow {
     position: relative;
     overflow: hidden !important;
     margin-right: 17px;
+    
+    .button-to-top {
+        right: 67px;
+    }
 }
 
 body {
@@ -79,6 +83,46 @@ main {
     display: block;
     position: relative;
     z-index: 1;
+    margin-bottom: 20px;
+    
+    &.disabled {
+        pointer-events: none;
+        
+        .main-input {
+            border-color: #E0E0E0;
+        
+            ~ .custome-placeholder {
+                color: #E0E0E0;
+            }
+        }
+    }
+}
+
+.textarea__wrapper {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    
+    .custome-placeholder {
+        top: 14px;
+        transform: scale(1);
+    }
+}
+
+.main-textarea {
+    &.main-input {
+        height: 100px;
+        resize: none;
+        padding-top: 13px;
+        
+        &.active {
+            + .custome-placeholder {
+                top: 5px;
+                transform: scale(0.6);
+            }
+        }
+    }
 }
 
 .custome-placeholder {
@@ -90,7 +134,7 @@ main {
     font-size: 14px;
     line-height: 16px;
     transform-origin: left;
-    transition: transform .4s, left .6s;
+    transition: transform .4s, left .6s, top .6s;
 }
 
 .main-input {
@@ -108,11 +152,6 @@ main {
         + .custome-placeholder {
             transform: translateY(-110%) scale(0.6);
         }
-    }
-   
-    
-    &.disabled {
-        border-color: #E0E0E0;
     }
     
     &.error {
@@ -309,6 +348,70 @@ input[type=number]::-webkit-inner-spin-button {
             appearance: none;
 }
 
+
+.radio__wrapper {
+    display: flex;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color .4s;
+    
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+    
+    &.disabled {
+        pointer-events: none;
+        color: #E0E0E0;
+        
+        .radio-custome {
+            border-color: #E0E0E0;
+        }
+    }
+    
+    input {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+        z-index: -1;
+        
+        &:checked {
+            + .radio-custome {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    .radio-custome {
+        display: block;
+        width: 18px;
+        height: 18px;
+        border: 1.5px solid #333333;
+        border-radius: 50%;
+        margin-right: 20px;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #333333;
+            opacity: 0;
+            transition: opacity .4s;
+        }
+    }
+}
 /* /General */
 
 /* Breadcrumbs */
@@ -319,6 +422,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .breadcrumbs__list {
     display: flex;
+    flex-wrap: wrap;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
