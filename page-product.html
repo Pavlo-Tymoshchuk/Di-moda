@@ -113,7 +113,9 @@
                     <a href="#">Ваш профиль</a>
                 </li>
                 <li class="header-nav__item">
-                    <a href="#">Доставка и оплата</a>
+                     <!-- New html  -->
+                    <button class="js-button" data-target='delivery'>Доставка и оплата</button>
+                    <!-- New html  -->
                 </li>
                 <li class="header-nav__item">
                     <a href="#">Контакты</a>
@@ -252,6 +254,19 @@
         
         <!-- /Add to card -->
         
+        <!-- New password noty  New HTML-->
+        
+        <!-- <section class="password-sent push-notifications">
+            <h3>Новый пароль отправлен.</h3>
+            <p>Проверьте, пожалуйста, почту и перейдите по ссылке в письме</p>
+            <div class="push-notifications__footer">
+                <p>Не пришло письмо?</p>
+                <a href="#" class="sent-repeatedly">Отправить повторно</a>
+            </div>
+        </section> -->
+        
+        <!-- New password noty  New HTML -->
+        
         <section class="product">
             <div class="product__wrapper container">
                 <div class="product-img__wrapper">
@@ -340,8 +355,8 @@
                     <div class="product-info-buttons__wrapper">
                         <div class="product-info-buttons__list">
                             <button class="product-info-buttons__item js-button" data-target="popup-composition">Состав и уход</button>
-                            <button class="product-info-buttons__item">Узнать о возврате и обмене</button>
-                            <button class="product-info-buttons__item">Доставка и оплата</button>
+                            <button class="product-info-buttons__item js-button" data-target="return">Узнать о возврате и обмене</button>
+                            <button class="product-info-buttons__item js-button" data-target='delivery'>Доставка и оплата</button>
                         </div>
                         <ul class="product-advantages__list">
                             <li class="product-advantages__item">
@@ -440,7 +455,7 @@
                     </li>
                     <li class="product__item">
                         <button class="main-button js-button-decor js-button" data-target="together-cheaper">
-                            <span class="text">выбрать товар</span>
+                            <span class="text">выбрать <span>товар</span></span>
                         </button>
                     </li>
                 </ul>
@@ -457,6 +472,13 @@
                                 <span class="text">200 грн</span>
                             </li>
                         </ul>
+                        <!-- New HTML -->
+                        <div class="product-sale-mobile">
+                            <p>Экономия</p>
+                            <p class="general-sale">100 грн</p>
+                        </div>
+                        
+                         <!-- //New HTML -->
                     </div>
                     <div class="add-to-cart">
                         <div class="product__price">
@@ -900,7 +922,9 @@
                             <a href="#">Ожидается в продаже</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#">Доставка и оплата</a>
+                            <!-- New html  -->
+                            <button class="js-button" data-target='delivery'>Доставка и оплата</button>
+                            <!-- New html  -->
                         </li>
                         <li class="footer__item">
                             <a href="#">Отзывы</a>
@@ -1448,6 +1472,73 @@
             </li>
         </ul>
     </section>
+     <!-- New HTML -->
+    <section class="popup popup-delivery" data-target='delivery'>
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <h3 class="caption">Способы оплаты</h3>
+        <ul class="popup-delivery__list">
+            <li class="popup-delivery__item">Наложный платеж</li>
+            <li class="popup-delivery__item">Наличными</li>
+        </ul>
+        <h3 class="caption">Способы доставки</h3>
+        <ul class="popup-delivery__list">
+            <li class="popup-delivery__item">Самовывоз</li>
+            <li class="popup-delivery__item">Новая почта</li>
+            <li class="popup-delivery__item">Укрпочта</li>
+        </ul>
+        <div class="popup-delivery-areas">
+            <h3 class="caption">Регионы доставки</h3>
+            <h4>Украина</h4>
+            <ul class="popup-delivery-areas__list">
+                <li class="popup-delivery-areas__item">
+                    <p>Донецкая область:</p>
+                    <ul class="sub__list">
+                        <li>Горловка</li>
+                        <li>Донецк</li>
+                        <li>Макеевка</li>
+                    </ul>
+                </li>
+                <li class="popup-delivery-areas__item">
+                    <p>Житомирская область</p>
+                </li>
+                <li class="popup-delivery-areas__item">
+                    <p>Полтавская область</p>
+                </li>
+                <li class="popup-delivery-areas__item">
+                    <p>Львовская область</p>
+                </li>
+                <li class="popup-delivery-areas__item">
+                    <p>Одесская область</p>
+                </li>
+                <li class="popup-delivery-areas__item">
+                    <p>Сумская область:</p>
+                    <ul class="sub__list">
+                        <li>Конотоп</li>
+                        <li>Сумы</li>
+                    </ul>
+                </li>
+                <li class="popup-delivery-areas__item">
+                    <p>Хмельницкая область</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="popup popup-return" data-target="return">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <h3 class="caption">Способы оплаты</h3>
+        <p>Компания осуществляет возврат и обмен товаров надлежащего качества согласно Закону <a href="#">«О защите прав потребителей»</a>.</p>
+        <h4>Сроки возврата и обмена</h4>
+        <p>Возврат и обмен товаров возможен в течение 14 дней после получения товара покупателем.</p>
+        <p>Обратная доставка товаров осуществляется по договоренности.</p>
+        <h4>Условия возврата для товаров надлежащего качества</h4>
+        <p>Интернет-магазин CASA DI MODAосуществляет возврат и обмен товаров надлежащего качества согласно Закону "О защите прав потребителей" Сроки возврата и обмена: Возврат и обмен товаров возможен в течении 14 дней после получения товара покупателем. Вы имеете право вернуть товар, купленный в нашем магазине если товар: -не соответствует характеристикам, -товар не соответствует заказанному, В этих случаях пересылку оплачивает магазин. При других случаях надо связаться с нашим менеджером, сообщить причину возврата и подать заявку на возврат. Обратно товар отправляете за свой счёт. при получении мы проверяем товарный вид и целостность возвращаемых изделий и упаковки (наличие сохранных ярлыков, бирок, упаковок со штрих-кодом; отсутствие следов носки, пятен и других загрязнений). Способы возврата товара через отделение «Нова пошта» через Укрпочту Способы возврата денег На банковскую карту Внимание - деньги будут перечислены Вам в течение 3-х дней после принятия возврата на склад</p>
+        <p>Согласно Закону <a href="#">«О защите прав потребителей»</a>, компания может отказать потребителю в обмене и возврате товаров надлежащего качества, если они относятся к категориям, указанным в действующем Перечне непродовольственных товаров надлежащего качества, не подлежащих возврату и обмену.</p>
+    </section>
+    <!-- /New HTML -->
     <div class="overlay"></div>
     <script src="./js/main.js"></script>
 </body>

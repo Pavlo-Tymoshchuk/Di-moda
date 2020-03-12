@@ -216,6 +216,22 @@
         <!-- <section class="emty-cart">
             <p>Ваша корзина пуста</p>
         </section> -->
+         <!-- New order noty  New HTML-->
+        
+        <!-- <section class="order-sent push-notifications">
+            <h3>Ваш заказ успешно оформлен!.</h3>
+            <p>Номер заказа: <span>123456</span></p>
+            <div class="push-notifications__footer">
+                <a href="#" class="main-button js-button-decor ">
+                    <span class="text">смотреть в профиле</span>
+                </a>
+                <a href="#" class="main-button-color js-button-decor">
+                    <span class="text">в каталог</span>
+                </a>
+            </div>
+        </section> -->
+        
+        <!-- New order noty  New HTML -->
         <section class="cart">
             <div class="cart__wrapper container">
                 <h2 class="main-caption-m">Корзина</h2>
@@ -608,6 +624,37 @@
                 </button>
             </form>
         </div>
+    </section>
+    <section class="popup popup-order-guest" data-target="popup-order-guest">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <h3 class="caption">Ваш заказ успешно оформлен!</h3>
+        <p class="number-order">Номер заказа: <span>123456</span></p>
+        <a href="#" class="main-button-color js-button-decor">
+            <span class="text">в каталог</span>
+        </a>
+        <a href="#" class="main-button js-button-decor">
+            <span class="text">Смотреть в профиле</span>
+        </a>
+        <form action="#">
+            <h4>После регистрации ваш заказ сохранится в истории покупок</h4>
+            <label class="input__wrapper">
+                <input type="text" class="main-input" value="ivanov@gmail.com">
+                <span class="custome-placeholder">E-mail</span>
+            </label>
+            <label class="input__wrapper pass-generation">
+                <input type="password" class="main-input">
+                <span class="custome-placeholder">Пароль</span>
+                <span class="pass-generation__wrapper">
+                    <span class="text">Использовать предложенный пароль <span class="generated-pass">12dfq567hjjkk88</span></span>
+                    <span class="info">Этот пароль будет сохранен в браузере. Вам не нужно его запоминать</span>
+                </span>
+            </label>
+            <button class="main-button js-button-decor">
+                <span class="text">зарегистрироваться</span>
+            </button>
+        </form>
     </section>
     <section class="popup popup-step" data-target="popup-step">
         <button class="js-close close__popup">

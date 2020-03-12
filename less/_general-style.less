@@ -60,6 +60,10 @@ html.overflow {
     .button-to-top {
         right: 67px;
     }
+    
+    .header {
+        width: calc(100% - 17px);
+    }
 }
 
 body {
@@ -301,7 +305,7 @@ main {
 }
 
 .main-caption-m {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
     line-height: 39px;
 }
@@ -542,5 +546,177 @@ input[type=number]::-webkit-inner-spin-button {
     
     .main-button-color {
         max-width: 223px;
+    }
+}
+
+/* /Add to cart */
+
+/* Push notification */
+
+.push-notifications {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 71px;
+    right: 5px;
+    max-width: 450px;
+    width: 100%;
+    min-height: 180px;
+    background: #FFFFFF;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 130%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+    
+    h3 {
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 30px;
+    }
+    
+    .sent-repeatedly {
+        margin-left: 20px;
+        text-decoration: underline;
+        transition: color .4s;
+    }
+    
+    &.order-sent {
+        min-height: 190px;
+        
+        .push-notifications__footer {
+            a {
+                max-width: calc(50% - 10px);
+            }
+        }
+    } 
+}
+
+.push-notifications__footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    p {
+        margin-left: auto;
+    }
+}
+
+/* /Push notification */
+
+/* Profile */
+
+.profile__wrapper {
+    max-width: 600px;
+    
+    .main-caption-m {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        
+        .input__wrapper {
+            width: calc(50% - 10px);
+        }
+    }
+}
+
+.profile__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0px 0px;
+}
+
+.registration-text {
+    padding: 20px;
+    border: 1px solid #F0F0F0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.registration-text__list {
+    margin-top: 20px;
+    
+    li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #333333;
+        }
+    }
+}
+
+.change-profile {
+    margin-bottom: 120px;
+    
+    .profile__buttons {
+        .main-button-color {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .change-pass-caption {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+}
+
+.profile-tabs__wrapper {
+    padding: 0px 20px;
+    margin-bottom: 35px;
+}
+
+.profile-tabs__list {
+    display: flex;
+}
+
+.profile-tabs__item {
+    cursor: pointer;
+    position: relative;
+    margin-right: 50px;
+    transition: text-shadow .4s;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -5px;
+        width: 0;
+        height: 1px;
+        background-color: #333333;
+        transition: width .4s;
+    }
+    
+    &.active {
+        text-shadow: 0px 0px 1px #333333;
+        
+        &::before {
+            width: 100%;
+        }
     }
 }
