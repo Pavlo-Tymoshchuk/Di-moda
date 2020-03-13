@@ -820,6 +820,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 400px;
   transition: visibility 0s 0.4s, opacity 0.2s 0.2s;
   opacity: 0;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.09);
 }
 .header-drop__item {
   width: 50%;
@@ -1671,9 +1672,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 /* /Sale block */
 /* Call-back-email */
-.call-back-email {
-  margin-bottom: 150px;
-}
 .call-back-email__wrapper {
   max-width: 600px;
   text-align: center;
@@ -2001,7 +1999,7 @@ input[type=number]::-webkit-inner-spin-button {
   background-repeat: no-repeat;
 }
 .about-us__img div:nth-child(1) {
-  margin-left: 120px;
+  margin-left: 105px;
 }
 .about-us__img div:nth-child(2) {
   width: 213px;
@@ -3467,6 +3465,49 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 20px;
 }
 /* /Contacts */
+/* About us */
+.about-us-page__general-img {
+  width: 100%;
+  height: 589px;
+  margin: 30px 0px 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-us-page__wrapper .text-wrapper {
+  max-width: 770px;
+  margin: 0px auto;
+  font-size: 16px;
+  line-height: 150%;
+}
+.about-us-page__wrapper h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 20px;
+}
+.about-us-page__wrapper p {
+  margin-bottom: 30px;
+}
+.about-us-page__wrapper p:last-child {
+  margin-bottom: 0px;
+}
+.about-us-page__wrapper .advantages__wrapper {
+  margin-top: 150px;
+}
+.about-us-page__img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.about-us-page__img div {
+  width: calc(50% - 15px);
+  height: 292px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* /About us */
 @media (min-width: 1160px) {
   @supports (-ms-ime-align:auto) {
     .main-button:hover {
@@ -4590,11 +4631,6 @@ input[type=number]::-webkit-inner-spin-button {
     margin-bottom: 80px;
   }
   /* /Sale block */
-  /* Call-back-email */
-  .call-back-email {
-    margin-bottom: 80px;
-  }
-  /* /Call-back-email */
   /* Lookbook */
   .lookbook-block {
     margin-bottom: 80px;
@@ -5119,7 +5155,19 @@ input[type=number]::-webkit-inner-spin-button {
   .contacts__buttons {
     margin-top: 40px;
   }
-  /* Contacts */
+  /* /Contacts */
+  /* About us */
+  .about-us-page__wrapper .advantages__wrapper {
+    margin-top: 80px;
+  }
+  .about-us-page__wrapper h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .about-us-page__general-img {
+    height: 387px;
+  }
+  /* /About us */
 }
 @media (max-width: 768px) {
   /* Main Banner */
@@ -5311,9 +5359,6 @@ input[type=number]::-webkit-inner-spin-button {
   }
   /* /Sale block */
   /* Call-back-email */
-  .call-back-email {
-    margin-bottom: 60px;
-  }
   .call-back-email__wrapper h4 {
     margin-bottom: 20px;
   }
@@ -6031,7 +6076,21 @@ input[type=number]::-webkit-inner-spin-button {
     left: 0px;
     bottom: 0px;
   }
-  /* Contacts */
+  /* /Contacts */
+  /* About us */
+  .about-us-page__wrapper .advantages__wrapper {
+    margin-top: 60px;
+  }
+  .about-us-page__general-img {
+    height: 170px;
+    margin: 30px 0px 30px;
+  }
+  .about-us-page__img div {
+    width: calc(50% - 5px);
+    height: 104px;
+    background-position: top;
+  }
+  /* /About us */
 }
 /* Footer */
 @media (max-width: 1200px) {

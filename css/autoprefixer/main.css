@@ -7346,7 +7346,8 @@ input[type=number]::-webkit-inner-spin-button {
   /* /Favorites */
   /* Contacts */
   .contacts {
-    margin-bottom: 118px;
+    margin-bottom: 0px;
+    position: relative;
   }
   .contacts__wrapper {
     -webkit-box-orient: vertical;
@@ -7360,6 +7361,16 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .contacts__map {
     width: 100%;
+    margin-top: 40px;
+    height: 549px;
+  }
+  .contacts__map iframe {
+    width: calc(100% + 700px);
+    margin-left: -350px;
+    position: absolute;
+    height: 549px;
+    left: 0px;
+    bottom: 0px;
   }
   /* Contacts */
 }
