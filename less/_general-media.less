@@ -23,7 +23,7 @@
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     /* Breadcrumbs */
     
     .breadcrumbs {
@@ -118,6 +118,42 @@
         
         &:last-child {
             padding-right: 30px;
+        }
+    }
+    
+    /* /Profile */
+    
+    /* Push notification */
+    
+    .push-notifications {
+        top: 51px;
+        right: 15px;
+    }
+    
+    /* /Push notification */
+    
+}
+
+@media (max-width: 576px) {
+    /* Push notification */
+    
+    .push-notifications {
+        max-width: calc(100% - 20px);
+        right: 10px;
+        
+        &.order-sent {
+            .push-notifications__footer {
+                flex-direction: column;
+                margin-top: 20px;
+                
+                a {
+                    max-width: 100%;
+                    
+                    &:first-child {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
         }
     }
 }

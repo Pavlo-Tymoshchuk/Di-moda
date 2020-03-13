@@ -593,12 +593,14 @@
                     </li>
                 </ul>
                 <div class="product-buttons">
-                    <button class="main-button-color js-button-decor js-button" data-target="enter">
+                    <!-- <button class="main-button-color js-button-decor js-button" data-target="enter">
+                        <span class="text">оставить отзыв</span>
+                    </button> -->
+                     <!-- If logged-->
+                    <button class="main-button-color js-button-decor js-button" data-target="add-reviews">
                         <span class="text">оставить отзыв</span>
                     </button>
-                    <!-- <a href="#" class="main-button-color js-button-decor js-button">
-                        <span class="text">оставить отзыв</span>
-                    </a> -->
+                    <!-- /If logged-->
                     <a href="#" class="reviews-block__link-mobile">Перейти на страницу отзывов</a>
                     <div class="general-buttons js-arrow-infinity">
                         <button class="prev">
@@ -1537,6 +1539,40 @@
         <h4>Условия возврата для товаров надлежащего качества</h4>
         <p>Интернет-магазин CASA DI MODAосуществляет возврат и обмен товаров надлежащего качества согласно Закону "О защите прав потребителей" Сроки возврата и обмена: Возврат и обмен товаров возможен в течении 14 дней после получения товара покупателем. Вы имеете право вернуть товар, купленный в нашем магазине если товар: -не соответствует характеристикам, -товар не соответствует заказанному, В этих случаях пересылку оплачивает магазин. При других случаях надо связаться с нашим менеджером, сообщить причину возврата и подать заявку на возврат. Обратно товар отправляете за свой счёт. при получении мы проверяем товарный вид и целостность возвращаемых изделий и упаковки (наличие сохранных ярлыков, бирок, упаковок со штрих-кодом; отсутствие следов носки, пятен и других загрязнений). Способы возврата товара через отделение «Нова пошта» через Укрпочту Способы возврата денег На банковскую карту Внимание - деньги будут перечислены Вам в течение 3-х дней после принятия возврата на склад</p>
         <p>Согласно Закону <a href="#">«О защите прав потребителей»</a>, компания может отказать потребителю в обмене и возврате товаров надлежащего качества, если они относятся к категориям, указанным в действующем Перечне непродовольственных товаров надлежащего качества, не подлежащих возврату и обмену.</p>
+    </section>
+    <section class="popup popup-add-reviews" data-target="add-reviews">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <h3 class="caption">Оставить отзыв</h3>
+        <form action="#">
+            <label class="textarea__wrapper">
+                <textarea class="main-textarea main-input"></textarea>
+                <span class="custome-placeholder">Ваш отзыв</span>
+            </label>
+            <p>Для других покупателей будет полезным, если вы добавите фото с вашей покупкой </p>
+            <input type="hidden" name="name-product">
+            <span class="add-reviews__list">
+                <label class="add-reviews__item">
+                    <input type="file" class="add-reviews__input" name="text_review_file" accept=".jpg, .jpeg, .png, .svg">
+                    <img src="" alt="Фото" class="add-reviews__img">
+                    <button type="button" class="add-reviews__delete-img"><span class="icon-close"></span></button>
+                </label>
+                <label class="add-reviews__item">
+                    <input type="file" class="add-reviews__input" name="text_review_file" accept=".jpg, .jpeg, .png, .svg">
+                    <img src="" alt="Фото" class="add-reviews__img">
+                    <button type="button" class="add-reviews__delete-img"><span class="icon-close"></span></button>
+                </label>
+                <label class="add-reviews__item">
+                    <input type="file" class="add-reviews__input" name="text_review_file" accept=".jpg, .jpeg, .png, .svg">
+                    <img src="" alt="Фото" class="add-reviews__img">
+                    <button type="button" class="add-reviews__delete-img"><span class="icon-close"></span></button>
+                </label>
+            </span>
+            <button class="main-button-color js-button-decor">
+                <span class="text">опубликовать отзыв</span>
+            </button>
+        </form>
     </section>
     <!-- /New HTML -->
     <div class="overlay"></div>

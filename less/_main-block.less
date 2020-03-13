@@ -746,6 +746,7 @@
     margin-right: 30px;
     position: relative;
     cursor: pointer;
+    transition: text-shadow .4s;
     
     &::before {
         content: "";
@@ -763,7 +764,8 @@
     }
     
     &.active {
-        font-weight: bold;
+        text-shadow: 0px 0px 1px #333333;
+        pointer-events: none;
         
         &::before {
             width: 100%;
@@ -2994,3 +2996,302 @@
 }
 
 /* /About us */
+
+/* Lookbook page */
+
+.lookbook-page {
+    .lookbook-block-img__list {
+        flex-wrap: wrap;
+        margin-bottom: -30px;
+        margin-top: 30px;
+    }
+    
+    .lookbook-block-img__item {
+        margin-bottom: 30px;
+        
+        &:first-child {
+            position: relative;
+            right: 0px;
+        }
+        
+        &:last-child {
+            position: relative;
+            left: 0px;
+            height: 520px;
+        }
+    }
+    
+    .general-buttons {
+        top: -80px;
+        transform: none;
+        
+        p {
+            margin-right: 15px;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+.lookbook-page__wrapper {
+    margin-bottom: 150px;
+    
+    h4 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+.about-us-lookbook {
+    margin-bottom: 0px;
+}
+
+/* /Lookbook page */
+
+
+/* Reviews page */
+
+.reviews-page {
+    margin-bottom: 150px;
+    
+    .reviews__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -30px;
+    }
+    
+    .reviews__item {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .textarea__wrapper {
+        margin: 30px 0px;
+    }
+    
+    .main-textarea {
+        &.main-input {
+            height: 222px;
+        }
+    }
+    
+    .reviews-go-to-product {
+        display: none;
+    }
+}
+
+.reviews__list-photo {
+    .reviews__item {
+        height: 448px;
+        position: relative;
+        margin-bottom: 40px;
+        
+        .content {
+            max-height: 290px;
+            margin-bottom: auto;
+        }
+        
+        .more_info {
+            margin-bottom: 20px;
+        }
+        
+        .reviews-go-to-product {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            text-decoration: underline;
+            position: absolute;
+            left: 0px;
+            bottom: -20px;
+            transition: color .4s;
+        }
+    }
+}
+
+.reviews-page__form {
+    max-width: 370px;
+    margin: 50px auto 150px;
+    max-height: 50px;
+    transition: max-height .4s;
+    overflow: hidden;
+    
+    &.active {
+        max-height: 386px;
+        
+        .wrapper {
+            .main-button {
+                display: flex;
+            }
+            
+            .main-button-color {
+                display: none;
+            }
+        }
+    }
+    
+    button {
+        max-width: 100%;
+    }
+    
+    .wrapper {
+        .main-button {
+            display: none;
+        }
+    }
+}
+
+.reviews-tabs__list {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.reviews-tabs__item {
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: text-shadow .4s;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -5px;
+        width: 0;
+        height: 1px;
+        background-color: #333333;
+        transition: width .4s;
+    }
+    
+    &.active {
+        text-shadow: 0px 0px 1px #333333;
+        pointer-events: none;
+        
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+.reviews-page__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* /Reviews page */
+
+/* Expected-on-sale */
+
+.expected-on-sale__wrapper {
+    margin-bottom: 150px;
+    
+    h4 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        margin: 20px 0px 30px;
+    }
+    
+    .buttons-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    
+    .show-elemet {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+.expected-on-sale {
+    .product__list {
+        margin-top: 30px;
+    }
+    
+    .product__item {
+        .show-photo {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 10px;
+            bottom: 10px;
+            width: 36px;
+            height: 36px;
+            font-size: 15px;
+            border-radius: 50%;
+            background-color: rgba(240, 240, 240, 0.25);
+        }
+        
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            
+            button {
+                max-width: calc(75% - 5px)
+            }
+            
+            .all-likes {
+                width: calc(25% - 5px);
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #F0F0F0;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 14px;
+                user-select: none;
+            }
+            
+            .icon-likes-finger {
+                padding-right: 4px;
+            }
+            
+            .main-button {
+                &.active-state {
+                    background-color: #333333;
+                    color: #ffffff;
+                    pointer-events: none;
+                    
+                    .decor {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+        .time-of-getting {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            margin: 20px 0px;
+            color: #828282;
+        }
+        
+        .message-of-receipt {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            transition: color .4s;
+            
+            .text {
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
+
+/* /Expected-on-sale */

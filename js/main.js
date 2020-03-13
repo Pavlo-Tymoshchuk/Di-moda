@@ -456,8 +456,25 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
     
-    // /Popup
+    let notyRadio = document.querySelectorAll(".popup-noty .radio__wrapper");
+    let notyInput = document.querySelectorAll(".popup-noty .input__wrapper");
     
+    if(notyRadio) {
+        notyRadio.forEach(function(item){
+            item.addEventListener("click", function(){
+                let inputRadioTarget = item.querySelector("input").getAttribute('data-target');
+                
+                notyInput.forEach(function(item){
+                    item.classList.remove('active');
+                });
+                
+                document.querySelector('.popup-noty .input__wrapper[data-target = ' + inputRadioTarget + ']').classList.add("active");
+            });
+        });
+    }
+    
+    // /Popup
+
     // Drop list
     
     
@@ -730,6 +747,79 @@ document.addEventListener('DOMContentLoaded', function(){
         
         }
     }
+    
+    /* Reviews photo */
+    
+    let photoInpput = document.querySelectorAll('.add-reviews__input');
+    let clearButton = document.querySelectorAll('.add-reviews__delete-img');
+    
+    if(photoInpput){
+        photoInpput.forEach(function(item){
+            item.addEventListener('change', function(){
+                let file = item.files[0];
+                let preview = item.closest(".add-reviews__item").querySelector(".add-reviews__img");
+                
+                let reader = new FileReader();
+                reader.onloadend = function () {
+                    let src = reader.result
+                    preview.setAttribute("src", src);
+                    
+                    preview.closest('.add-reviews__item').classList.add('active');
+                }
+
+                if (file) {
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.src = "";
+                }
+            });
+        });
+        
+        clearButton.forEach(function(item){
+            item.addEventListener('click', function(){
+                let input = item.closest(".add-reviews__item").querySelector(".add-reviews__input");
+                item.closest(".add-reviews__item").classList.remove('active');
+                input.value = null;
+            });
+        });
+    }
+    
+    let openReviewsButton = document.querySelectorAll('.js-open-reviews');
+    
+    if(openReviewsButton) {
+        openReviewsButton.forEach(function(item){
+            item.addEventListener('click', function(){
+                document.querySelector('.reviews-page__form').classList.toggle('active');
+            });
+        })
+        
+    }
+    
+    /* /Reviews photo */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

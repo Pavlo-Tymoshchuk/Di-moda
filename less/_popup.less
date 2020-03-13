@@ -7,7 +7,8 @@
     background-color: #fff;
     max-height: 100%;
     overflow: auto;
-    scrollbar-width: none;
+    scrollbar-width: 4px;
+    scrollbar-color: #F0F0F0;
     -ms-overflow-style: none;
     
     .caption {
@@ -16,6 +17,7 @@
         line-height: 130%;
         text-align: center;
         margin-bottom: 20px;
+        padding: 0px 20px;
     }
     
     .main-button {
@@ -45,11 +47,13 @@
 
 .close__popup {
     position: absolute;
-    right: 16px;
-    top: 16px;
+    right: 11px;
+    top: 11px;
     font-size: 25px;
     color: #4f4f4f;
+    padding: 5px;
     transition: color .4s;
+    z-index: 2;
 }
 
 .overlay {
@@ -460,6 +464,7 @@
     
     &.active {
         text-shadow: 0px 0px 1px #333333;
+        pointer-events: none;
         
         &::before {
             width: 100%;
@@ -570,7 +575,7 @@
     }
 }
 
-/* Popup Return */
+/* /Popup Return */
 
 /* Popup Order Guest */
 
@@ -671,5 +676,253 @@
         100% {
             opacity: 1;
         }
+    }
+}
+
+/* /Popup Order Guest */
+
+/* Popup add reviews */
+
+
+.popup-add-reviews {
+    max-width: 450px;
+    width: 100%;
+    max-height: 658px;
+    padding: 50px;
+    
+    p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+    }
+    
+    .main-textarea {
+        &.main-input {
+            height: 222px;
+        }
+    }
+}
+
+.add-reviews__list {
+    display: flex;
+    margin: 35px 0px 30px;
+}
+
+.add-reviews__item {
+    position: relative;
+    width: 70px;
+    height: 102px;
+    border: 1px solid #F0F0F0;
+    transition: border-color .4s, opacity .4s;
+    cursor: pointer;
+    margin-right: 30px;
+    opacity: 0;
+    z-index: -1;
+    
+    &:first-child {
+        opacity: 1;
+        z-index: 2;
+    }
+    
+    &.active {
+        opacity: 1;
+        z-index: 2;
+        
+        + .add-reviews__item {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+    
+    &::before {
+        content: "+";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        transition: color .4s;
+    }
+    
+    &.active {
+        .add-reviews__img {
+            opacity: 1;
+            z-index: 2;
+        }
+        
+        .add-reviews__delete-img {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+}
+
+.add-reviews__delete-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .4s;
+    
+    span {
+        font-size: 12px;
+    }
+}
+
+.add-reviews__input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+}
+
+.add-reviews__img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    object-fit: cover;
+    object-position: top;
+    transition: opacity .4s;
+}
+
+/* /Popup add reviews */
+
+/* Popup noty */
+
+.popup-noty {
+    max-width: 450px;
+    width: 100%;
+    padding: 50px;
+    
+    .popup-radio {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    
+    .radio__wrapper {
+        width: calc(50% - 10px);
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .radio-custome {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .input__wrapper {
+        display: none;
+        
+        &.active {
+            display: block;
+        }
+    }
+}
+
+/* Popup noty */
+
+/* Popup gallery */
+
+.popup-gallery {
+    max-width: 460px;
+    width: 100%;
+    padding: 10px;
+    
+    .general-img {
+        height: 529px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .wrapper {
+        position: relative;
+    }
+    
+    .gallery-button {
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 8px;
+        
+        &.next {
+            left: auto;
+            right: 5px;
+        }
+    }
+}
+
+
+.popup-gallery__list {
+    display: flex;
+    margin-top: 10px;
+    overflow: auto;
+    margin-right: -10px;
+    position: relative;
+    scrollbar-width: 4px;
+    scrollbar-color: #F0F0F0;
+    -ms-overflow-style: none;
+    
+    &::after {
+        content: "d";
+        display: block;
+        width: 2px;
+        height: 2px;
+        color: transparent;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 2px;
+        border-radius: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #F0F0F0;
+    }
+
+}
+
+.popup-gallery__item {
+    width: calc(33.33% - 10px);
+    height: 170px;
+    margin-right: 10px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    transition: border-color .4s;
+    cursor: pointer;
+    
+    &:last-child {
+       margin-right: 0px;
+    }
+    
+    &.active {
+        border-color: #333333;
     }
 }

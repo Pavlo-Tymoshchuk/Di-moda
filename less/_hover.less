@@ -210,6 +210,16 @@
         }
     }
     
+    .add-reviews__item {
+        &:hover {
+            border-color: #8D4ACC;
+            
+            &::before {
+                color: #8D4ACC;
+            }
+        }
+    }
+    
     /* /Popup */
     
     /* Push noty */
@@ -218,6 +228,16 @@
         .sent-repeatedly {
             &:hover {
                 color: #8D4ACC;
+            }
+        }
+        
+        &.reviews {
+            .push-notifications__footer {
+                a {
+                    &:hover {
+                        color: #8D4ACC;
+                    }
+                }
             }
         }
     }
@@ -403,6 +423,34 @@
             &:hover {
                 color: #8D4ACC;
             }
+        }
+    }
+    
+    /* /Contact */
+    
+    /* Page Reviews */
+    
+    .reviews-tabs__item {
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    
+    .reviews-go-to-product {
+        &:hover {
+            color: #8D4ACC;
+        }
+    }
+    
+    /* /Page reviews */
+    
+    /* SS */
+    
+    .message-of-receipt {
+        &:hover {
+            color: #8D4ACC;
         }
     }
 }
