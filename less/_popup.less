@@ -7,8 +7,8 @@
     background-color: #fff;
     max-height: 100%;
     overflow: auto;
-    scrollbar-width: 4px;
-    scrollbar-color: #F0F0F0;
+    scrollbar-color: #F0F0F0 white;
+    scrollbar-width: thin;
     -ms-overflow-style: none;
     
     .caption {
@@ -868,10 +868,16 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 8px;
+        transition: color .4s, opacity .4s;
         
         &.next {
             left: auto;
             right: 5px;
+        }
+
+        &.disabled {
+            opacity: 0.6;
+            pointer-events: none;
         }
     }
 }
@@ -883,33 +889,25 @@
     overflow: auto;
     margin-right: -10px;
     position: relative;
-    scrollbar-width: 4px;
-    scrollbar-color: #F0F0F0;
+    scrollbar-color: #F0F0F0 white;
+    scrollbar-width: thin;
     -ms-overflow-style: none;
-    
-    &::after {
-        content: "d";
-        display: block;
-        width: 2px;
-        height: 2px;
-        color: transparent;
-    }
+    padding-bottom: 5px;
     
     &::-webkit-scrollbar {
-        width: 2px;
-        border-radius: 5px;
+        height: 4px;
     }
     
     &::-webkit-scrollbar-thumb {
         background: #F0F0F0;
+        border-radius: 5px;
     }
 
 }
 
 .popup-gallery__item {
-    width: calc(33.33% - 10px);
+    width: 33.33%;
     height: 170px;
-    margin-right: 10px;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -917,6 +915,19 @@
     border: 1px solid transparent;
     transition: border-color .4s;
     cursor: pointer;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        width: 10px;
+        height: calc(100% + 2px);
+        background-color: #fff;
+        border-left: 1px solid transparent;
+        transition: border-color .4s;
+    }
     
     &:last-child {
        margin-right: 0px;
@@ -924,5 +935,9 @@
     
     &.active {
         border-color: #333333;
+
+        &::before {
+            border-color: #333333;
+        }
     }
 }

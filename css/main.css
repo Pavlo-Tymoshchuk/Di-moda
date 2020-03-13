@@ -211,6 +211,9 @@ body {
   font-family: 'Gilroy', sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #333333;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 main {
   margin-top: 70px;
@@ -1084,6 +1087,12 @@ input[type=number]::-webkit-inner-spin-button {
   .add-reviews__item:hover::before {
     color: #8D4ACC;
   }
+  .popup-gallery__item:hover {
+    border-color: #333333;
+  }
+  .popup-gallery__item:hover::before {
+    border-color: #333333;
+  }
   /* /Popup */
   /* Push noty */
   .push-notifications .sent-repeatedly:hover {
@@ -1125,6 +1134,9 @@ input[type=number]::-webkit-inner-spin-button {
   /* /Catalog */
   /* Product page */
   .product-img__item:hover {
+    border-color: #333333;
+  }
+  .product-img__item:hover::after {
     border-color: #333333;
   }
   .product-img__button:hover {
@@ -2500,17 +2512,31 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .product-img__item {
   width: 70px;
-  height: 89px;
-  margin-bottom: 10px;
+  height: 99px;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid #fff;
   transition: border-color 0.4s;
   cursor: pointer;
+  position: relative;
 }
 .product-img__item.active {
   border-color: #333333;
+}
+.product-img__item.active::after {
+  border-color: #333333;
+}
+.product-img__item::after {
+  content: "";
+  width: calc(100% + 2px);
+  position: absolute;
+  height: 10px;
+  left: -1px;
+  bottom: -1px;
+  background-color: #ffffff;
+  border-top: 1px solid transparent;
+  transition: border-color 0.4s;
 }
 .product-img__button {
   width: 70px;
@@ -3842,8 +3868,8 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #fff;
   max-height: 100%;
   overflow: auto;
-  scrollbar-width: 4px;
-  scrollbar-color: #F0F0F0;
+  scrollbar-color: #F0F0F0 white;
+  scrollbar-width: thin;
   -ms-overflow-style: none;
 }
 .popup .caption {
@@ -4530,10 +4556,15 @@ input[type=number]::-webkit-inner-spin-button {
   top: 50%;
   transform: translateY(-50%);
   font-size: 8px;
+  transition: color 0.4s, opacity 0.4s;
 }
 .popup-gallery .gallery-button.next {
   left: auto;
   right: 5px;
+}
+.popup-gallery .gallery-button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 .popup-gallery__list {
   display: flex;
@@ -4541,28 +4572,21 @@ input[type=number]::-webkit-inner-spin-button {
   overflow: auto;
   margin-right: -10px;
   position: relative;
-  scrollbar-width: 4px;
-  scrollbar-color: #F0F0F0;
+  scrollbar-color: #F0F0F0 white;
+  scrollbar-width: thin;
   -ms-overflow-style: none;
-}
-.popup-gallery__list::after {
-  content: "d";
-  display: block;
-  width: 2px;
-  height: 2px;
-  color: transparent;
+  padding-bottom: 5px;
 }
 .popup-gallery__list::-webkit-scrollbar {
-  width: 2px;
-  border-radius: 5px;
+  height: 4px;
 }
 .popup-gallery__list::-webkit-scrollbar-thumb {
   background: #F0F0F0;
+  border-radius: 5px;
 }
 .popup-gallery__item {
-  width: calc(33.33% - 10px);
+  width: 33.33%;
   height: 170px;
-  margin-right: 10px;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4570,11 +4594,26 @@ input[type=number]::-webkit-inner-spin-button {
   border: 1px solid transparent;
   transition: border-color 0.4s;
   cursor: pointer;
+  position: relative;
+}
+.popup-gallery__item::before {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 10px;
+  height: calc(100% + 2px);
+  background-color: #fff;
+  border-left: 1px solid transparent;
+  transition: border-color 0.4s;
 }
 .popup-gallery__item:last-child {
   margin-right: 0px;
 }
 .popup-gallery__item.active {
+  border-color: #333333;
+}
+.popup-gallery__item.active::before {
   border-color: #333333;
 }
 /* Footer */
@@ -5476,8 +5515,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .product-img__item {
     width: 43px;
-    height: 55px;
-    margin-bottom: 10px;
+    height: 65px;
   }
   .product-img__button {
     width: 43px;
@@ -6391,7 +6429,10 @@ input[type=number]::-webkit-inner-spin-button {
     height: 301px;
   }
   .product-img__item {
-    margin-bottom: 5px;
+    height: 60px;
+  }
+  .product-img__item::after {
+    height: 5px;
   }
   .product-img__button {
     height: 48px;
