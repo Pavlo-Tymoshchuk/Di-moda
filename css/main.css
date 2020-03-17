@@ -608,12 +608,14 @@ input[type=number]::-webkit-inner-spin-button {
 }
 /* /Add to cart */
 /* Push notification */
-.push-notifications {
-  display: flex;
-  flex-direction: column;
+noty_bar noty_type__success noty_theme__push_notification__item noty_close_with_click noty_has_timeout noty_has_progressbar .push-notifications {
   position: fixed;
   top: 71px;
   right: 30px;
+}
+.noty_theme__push_notification__item {
+  display: flex;
+  flex-direction: column;
   max-width: 450px;
   width: 100%;
   min-height: 180px;
@@ -625,51 +627,51 @@ input[type=number]::-webkit-inner-spin-button {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   z-index: 4;
 }
-.push-notifications h3 {
+.noty_theme__push_notification__item h3 {
   font-size: 18px;
   line-height: 130%;
   margin-bottom: 30px;
 }
-.push-notifications .sent-repeatedly {
+.noty_theme__push_notification__item .sent-repeatedly {
   margin-left: 20px;
   text-decoration: underline;
   transition: color 0.4s;
 }
-.push-notifications.order-sent {
+.noty_theme__push_notification__item.noty_type__order-sent {
   min-height: 190px;
 }
-.push-notifications.order-sent .push-notifications__footer a {
+.noty_theme__push_notification__item.noty_type__order-sent .push-notifications__footer a {
   max-width: calc(50% - 10px);
 }
-.push-notifications.reviews {
+.noty_theme__push_notification__item.noty_type__reviews {
   min-height: 120px;
 }
-.push-notifications.reviews .push-notifications__footer {
+.noty_theme__push_notification__item.noty_type__reviews .push-notifications__footer {
   justify-content: flex-end;
 }
-.push-notifications.reviews .push-notifications__footer a {
+.noty_theme__push_notification__item.noty_type__reviews .push-notifications__footer a {
   font-weight: 600;
   font-size: 14px;
   line-height: 130%;
   text-decoration: underline;
   transition: color 0.4s;
 }
-.push-notifications.emty-cart {
+.noty_theme__push_notification__item.noty_type__emty-cart {
   max-width: 216px;
   min-height: 63px;
   justify-content: center;
   align-items: center;
 }
-.push-notifications.emty-cart p {
+.noty_theme__push_notification__item.noty_type__emty-cart p {
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
 }
-.push-notifications.thanks {
+.noty_theme__push_notification__item.noty_type__thanks {
   min-height: 180px;
   max-width: 495px;
 }
-.push-notifications.thanks p {
+.noty_theme__push_notification__item.noty_type__thanks p {
   font-weight: 700;
   font-size: 18px;
   line-height: 140%;
@@ -3308,7 +3310,7 @@ input[type=number]::-webkit-inner-spin-button {
 /* /Cart */
 /* Profile page */
 .profile {
-  margin-bottom: 80px;
+  margin-bottom: 150px;
 }
 .profile .main-button {
   margin: 0px auto;
@@ -3831,6 +3833,23 @@ input[type=number]::-webkit-inner-spin-button {
   text-decoration-line: underline;
 }
 /* /Expected-on-sale */
+/* Login */
+.login__wrapper {
+  max-width: 600px;
+}
+.login__wrapper .main-caption-m {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.popup-order.login {
+  max-width: 100%;
+  padding: 0px;
+  margin-bottom: 150px;
+}
+.popup-order.login .main-button,
+.popup-order.login .main-button-color {
+  max-width: 100%;
+}
 @media (min-width: 1160px) {
   @supports (-ms-ime-align:auto) {
     .main-button:hover {
@@ -4813,14 +4832,14 @@ input[type=number]::-webkit-inner-spin-button {
     max-width: calc(100% - 20px);
     right: 10px;
   }
-  .push-notifications.order-sent .push-notifications__footer {
+  .noty_theme__push_notification__item.noty_type__order-sent .push-notifications__footer {
     flex-direction: column;
     margin-top: 20px;
   }
-  .push-notifications.order-sent .push-notifications__footer a {
+  .noty_theme__push_notification__item.noty_type__order-sent .push-notifications__footer a {
     max-width: 100%;
   }
-  .push-notifications.order-sent .push-notifications__footer a:first-child {
+  .noty_theme__push_notification__item.noty_type__order-sent .push-notifications__footer a:first-child {
     margin-bottom: 10px;
   }
 }
@@ -5787,6 +5806,11 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 30px;
   }
   /* /Expected-on-sale */
+  /* Login */
+  .popup-order.login {
+    margin-bottom: 138px;
+  }
+  /* /Login */
 }
 @media (max-width: 767px) {
   /* Main Banner */
@@ -6799,6 +6823,12 @@ input[type=number]::-webkit-inner-spin-button {
   .expected-on-sale__wrapper .show-elemet {
     margin-bottom: 10px;
   }
+  /* /Expected-on-sale */
+  /* Login */
+  .popup-order.login {
+    margin-bottom: 118px;
+  }
+  /* /Login */
 }
 /* Footer */
 @media (max-width: 1200px) {

@@ -556,12 +556,16 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* Push notification */
 
+noty_bar noty_type__success noty_theme__push_notification__item noty_close_with_click noty_has_timeout noty_has_progressbar
 .push-notifications {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     top: 71px;
     right: 30px;
+}
+
+.noty_theme__push_notification__item  {
+    display: flex;
+    flex-direction: column;
     max-width: 450px;
     width: 100%;
     min-height: 180px;
@@ -585,7 +589,7 @@ input[type=number]::-webkit-inner-spin-button {
         transition: color .4s;
     }
     
-    &.order-sent {
+    &.noty_type__order-sent {
         min-height: 190px;
         
         .push-notifications__footer {
@@ -595,7 +599,7 @@ input[type=number]::-webkit-inner-spin-button {
         }
     } 
     
-    &.reviews {
+    &.noty_type__reviews {
         min-height: 120px;
         
         .push-notifications__footer {
@@ -611,7 +615,7 @@ input[type=number]::-webkit-inner-spin-button {
         }
     }
     
-    &.emty-cart {
+    &.noty_type__emty-cart {
         max-width: 216px;
         min-height: 63px;
         justify-content: center;
@@ -624,7 +628,7 @@ input[type=number]::-webkit-inner-spin-button {
         }
     }
     
-    &.thanks {
+    &.noty_type__thanks {
         min-height: 180px;
         max-width: 495px;
         
@@ -645,6 +649,7 @@ input[type=number]::-webkit-inner-spin-button {
         margin-left: auto;
     }
 }
+
 
 /* /Push notification */
 
