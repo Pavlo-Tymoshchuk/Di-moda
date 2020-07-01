@@ -453,6 +453,7 @@ document.addEventListener('DOMContentLoaded', function(){
         item.addEventListener("click", function(){
             let wrapperPopup = item.closest(".popup");
             wrapperPopup.classList.remove('active');
+            console.log('asd')
         });
     });
     
